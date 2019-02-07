@@ -282,5 +282,20 @@
     <ClCompile Include="16478원의분할.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1158조세퍼스.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1927최소힙.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11279최대힙.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="9012괄호.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2164카드2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
