@@ -309,7 +309,7 @@
     <ClCompile Include="2445별찍기-8.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2446별찍기-6.cpp">
+    <ClCompile Include="2446별찍기-9.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
