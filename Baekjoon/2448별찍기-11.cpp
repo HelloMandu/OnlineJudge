@@ -25,7 +25,7 @@ int main() {
 	cin >> n;
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < 2 * n; j++)
-			arr[i][j] = j == 2 * n - 1 ? '\n' : ' ';
+			arr[i][j] = (j == 2 * n - 1) ? '\n' : ' ';
 	Star(n, n - 1, 0);
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < 2 * n; j++)
