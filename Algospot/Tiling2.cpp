@@ -1,4 +1,4 @@
-/*동적프로그래밍*/
+/*동적프로그래밍을 이용한 타일링문제*/
 #include<iostream>
 using namespace std;
 
