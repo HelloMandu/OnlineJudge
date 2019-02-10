@@ -17,7 +17,7 @@ void setResult(int n) {
 		gcd = (gcd < (num[i + 1] - num[i])) ? getGcd(gcd, num[i + 1] - num[i]) : getGcd(num[i + 1] - num[i], gcd);
 	}
 
-	for (int i = 2; i * i <= gcd; i++) { // 약수를 구한다
+	for (int i = 2; i * i <= gcd; i++) { // 최대공약수의 약수를 구한다
 		if (gcd%i == 0) {
 			result.push_back(i);
 			if (i * i < gcd) {
