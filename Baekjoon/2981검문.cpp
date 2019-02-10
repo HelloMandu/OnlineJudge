@@ -1,30 +1,31 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 #define fastIO() ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 using namespace std;
-typedef long long lint;
 
-lint num[100];
-vector<lint> result;
+int num[100];
+vector<int> result;
 
-inline lint getGcd(lint num1, lint num2) {
+inline int getGcd(int num1, int num2) {
 	return num1 ? getGcd(num2 % num1, num1) : num2;
 }
 
 void setResult(int n) {
-	int gcd;
-	while (true) {
-		for (int i = 0; i < n - 1; i++) {
-			gcd = getGcd(num[i], num[i + 1]);
-		}
-		result.push_back(gcd);
-		for (int i = 0; i < n; i++) {
-			num[i] -= gcd;
-			if (!num[i]) {
-				return;
+	int gcd = num[1] - num[0];
+	for (int i = 1; i < n - 1; i++) { // 소수구하기
+		gcd = (gcd < (num[i + 1] - num[i])) ? getGcd(gcd, num[i + 1] - num[i]) : getGcd(num[i + 1] - num[i], gcd);
+	}
+
+	for (int i = 2; i * i <= gcd; i++) { // 최대공약수와 그의 대한 소수를 구함
+		if (gcd%i == 0) {
+			result.push_back(i);
+			if (i * i < gcd) {
+				result.push_back(gcd / i);
 			}
 		}
 	}
+	result.push_back(gcd);
 }
 
 int main() {
@@ -34,7 +35,9 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cin >> num[i];
 	}
+	sort(num, num + n);
 	setResult(n);
+	sort(result.begin(), result.end());
 	for (int i = 0; i < result.size(); i++) {
 		cout << result[i] << ' ';
 	}
