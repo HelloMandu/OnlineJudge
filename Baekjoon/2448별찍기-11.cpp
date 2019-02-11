@@ -1,17 +1,18 @@
 #include<iostream>
+#define fastIO() ios_base::sync_base_studio(false), cin.tie(NULL), cout.tie(NULL);
 using namespace std;
 
 char arr[3072][6144];
 
 void Star(int n, int x, int y) {
 	if (n == 3) {
-		arr[y][x] = '*';
-		arr[y + 1][x - 1] = '*';
-		arr[y + 1][x + 1] = '*';
-		arr[y + 2][x - 2] = '*';
-		arr[y + 2][x - 1] = '*';
-		arr[y + 2][x] = '*';
-		arr[y + 2][x + 1] = '*';
+		arr[y][x] = 
+		arr[y + 1][x - 1] = 
+		arr[y + 1][x + 1] = 
+		arr[y + 2][x - 2] = 
+		arr[y + 2][x - 1] = 
+		arr[y + 2][x] = 
+		arr[y + 2][x + 1] = 
 		arr[y + 2][x + 2] = '*';
 		return;
 	}
