@@ -38,7 +38,6 @@ void outputMatrix() {
 	}
 }
 
-
 int main() {
 	fastIO();
 	inputMatrix();
