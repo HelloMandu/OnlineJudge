@@ -6,7 +6,7 @@
 using namespace std;
 
 char boggle[MAX][MAX] = { 0 };
-bool dp[MAX][MAX][10];
+bool dp[10][MAX][MAX];
 string voca;
 
 void setBoggle() { // 게임판 입력
@@ -21,8 +21,8 @@ bool findVoca(int i, int j, int present) { // voca를 찾는다
 	for (int a = i - 1; a <= i + 1; a++) {
 		for (int b = j - 1; b <= j + 1; b++) {
 			if (a != i || b != j) { // 자기 인덱스를 제외하고 
-				if (boggle[a][b] == voca[present] && !dp[a][b][present]) { // 단어를 찾았고, 방문하지 않았을 시
-					dp[a][b][present] = true; // 방문체크
+				if (boggle[a][b] == voca[present] && !dp[present][a][b]) { // 단어를 찾았고, 방문하지 않았을 시
+					dp[present][a][b] = true; // 방문체크
 					if (findVoca(a, b, present + 1)) // 그 다음 단어를 찾음
 						return true;
 				}
