@@ -72,4 +72,5 @@ int main() {
 		printSnail(n);
 	}
 	return 0;
+
 }
