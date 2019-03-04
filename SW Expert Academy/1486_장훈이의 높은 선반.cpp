@@ -36,6 +36,5 @@ int main() {
 		cout << '#' << t << ' ' << result - B << '\n';
 		result = 987654321;
 	}
-
 	return 0;
 }
