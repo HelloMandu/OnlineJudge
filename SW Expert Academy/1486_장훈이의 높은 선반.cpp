@@ -1,6 +1,6 @@
 #include<iostream>
 #include<algorithm>
-#define fastIO() ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+#define fastIO() ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define MAX 21
 using namespace std;
 
@@ -13,7 +13,7 @@ void computeHeight(int present = 0, int allheight = 0) {
 	if (present > N) {
 		return;
 	}
-	/*기저사례 : 장훈이의 키보다 클 경우*/
+	/*장훈이의 키보다 클 경우*/
 	else if (allheight >= B) {
 		result = min(result, allheight);
 	}

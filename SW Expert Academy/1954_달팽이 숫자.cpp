@@ -1,5 +1,5 @@
 #include<iostream>
-#define fastIO() ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+#define fastIO() ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define MAX 10
 using namespace std;
 

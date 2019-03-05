@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 #include<algorithm>
-#define fastIO() ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL);
+#define fastIO() ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
 #define MAX 12
 #define INF 987654321
 using namespace std;
