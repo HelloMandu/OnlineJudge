@@ -16,6 +16,7 @@ void input() {
 	}
 }
 
+/*파라메틱 서치*/
 long long shortestTime() {
 	long long start = 1, end = 1e14 + 1; // 최소시간, 최대시간
 	long long mid, result = 1e14 + 1;
