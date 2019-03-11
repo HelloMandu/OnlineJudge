@@ -30,7 +30,6 @@ int main() {
 	int testcase;
 	cin >> testcase;
 	while (testcase--) {
-
 		int n, k;
 		queue<int> Queue;
 		cin >> n >> k;
