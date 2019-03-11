@@ -69,5 +69,8 @@
     <ClCompile Include="ASYMTILING.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="JOSEPHUS.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
