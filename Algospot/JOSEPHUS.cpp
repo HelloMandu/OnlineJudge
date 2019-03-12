@@ -1,7 +1,5 @@
-/*동적프로그래밍을 이용한 타일링문제*/
 #include<iostream>
 #include<queue>
-#define MOD 1000000007
 using namespace std;
 
 void josephus(queue<int> &Queue, int n, int k) {
