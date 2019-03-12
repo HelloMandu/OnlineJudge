@@ -13,7 +13,7 @@ void input() {
 	}
 }
 
-int heightDifference() {//asd
+int heightDifference() {
 	while (dump--) {
 		sort(box, box + MAX);
 		box[0]++; box[99]--; // 최대값과 최소값에 +1, -1
