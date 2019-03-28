@@ -2,7 +2,7 @@
 #include<vector>
 #include<algorithm>
 #define fastIO() ios_base::sync_with_stdio(false), cin.tie(NULL), cout.tie(NULL)
-#define MAX 100
+#define MAX 101
 using namespace std;
 
 int n, y[MAX], x[MAX], radius[MAX];
