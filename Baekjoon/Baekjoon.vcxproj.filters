@@ -384,5 +384,8 @@
     <ClCompile Include="1922네트워크연결.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1197최소스패닝트리.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
