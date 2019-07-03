@@ -6,8 +6,8 @@ using namespace std;
 char island[MAX][MAX];
 bool alphabet[26];
 int testcase, r, c, result;
-int dx[4] = { 0, 1, 0, -1 };
 int dy[4] = { -1, 0, 1, 0 };
+int dx[4] = { 0, 1, 0, -1 };
 
 void input() {
 	result = 0;
