@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int dp[301][301];
+int cache[301][301];
 int main() {
 	int n, m;
 	cin >> n >> m;
@@ -9,7 +9,7 @@ int main() {
 		for (int j = 1; j <= m; j++) {
 			int temp;
 			cin >> temp;
-			dp[i][j] = dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1] + temp;
+			cache[i][j] = cache[i - 1][j] + cache[i][j - 1] - cache[i - 1][j - 1] + temp;
 		}
 	}
 	int k;
@@ -17,7 +17,7 @@ int main() {
 	while (k--) {
 		int i, j, x, y;
 		cin >> i >> j >> x >> y;
-		cout << dp[x][y] - dp[x][j - 1] - dp[i - 1][y] + dp[i - 1][j - 1] << '\n';
+		cout << cache[x][y] - cache[x][j - 1] - cache[i - 1][y] + cache[i - 1][j - 1] << '\n';
 	}
 	return 0;
 }

@@ -1,45 +1,22 @@
 #include<iostream>
-#include<algorithm>
+#include<string.h>
 using namespace std;
 
-//int dp[40] = {0, 1};
+int dp[40] = { 0, 1 };
+int cache[40];
 int result[2];
-/*int Fibonacci(int n) {
-	if (n < 2)
-		return dp[n];
-	else if (dp[n])
-		return dp[n];
-	else
-		return dp[n] = Fibonacci(n - 1) + Fibonacci(n - 2);
-}
 
-int Fibonacci(int n) {
-	if (n == 0) {
-		result[0]++;
-		return 0;
+int fibonacci(int n) {
+	if (n < 2) {
+		result[n]++;
+		return n;
 	}
-	else if (n == 1) {
-		result[1]++;
-		return 1;
+	else if (dp[n] != -1) {
+		result[cache[n]]++;
+		return dp[n];
 	}
-	else
-		return Fibonacci(n - 1) + Fibonacci(n - 2);
-}*/
-
-void Fibonacci(int n) {
-	if (n == 0) {
-		result[0]++;
-		return;
-	}
-	else if (n == 1) {
-		result[1]++;
-		return;
-	}
-	result[0]++; result[1]++;
-	for (int i = 2; i < n; i++) {
-		int temp = result[1];
-		result[1] += result[0];
-		result[0] = temp;
+	else {
+		return dp[n] = fibonacci(n - 1) + fibonacci(n - 2);
 	}
 }
 
@@ -48,18 +25,12 @@ int main() {
 	cin.tie(NULL), cout.tie(NULL);
 	int testcase;
 	cin >> testcase;
+	memset(cache, -1, sizeof(cache));
 	while (testcase--) {
 		int n, fibo;
+		cache[0] = 0; cache[1] = 1;
 		cin >> n;
-		/*if (n == 0)
-			cout << "1 0\n";
-		else if (n == 1)
-			cout << "0 1\n";
-		else {
-			Fibonacci(n);
-			cout << dp[n - 1] << ' ' << dp[n] << '\n';
-		}*/
-		Fibonacci(n);
+		fibonacci(n);
 		cout << result[0] << ' ' << result[1] << '\n';
 		result[0] = 0; result[1] = 0;
 	}

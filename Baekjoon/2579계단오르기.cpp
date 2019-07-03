@@ -4,16 +4,16 @@
 using namespace std;
 
 int stair[MAX]; // 각 계단의 점수
-int dp[MAX]; // 해당 계단까지 오르는데 걸리는 최대 점수
+int cache[MAX]; // 해당 계단까지 오르는데 걸리는 최대 점수
 
 int MaxScore(int n) {
-	dp[0] = stair[0];
-	dp[1] = stair[0] + stair[1];
-	dp[2] = max(stair[0] + stair[2], stair[1] + stair[2]); // 1->3 또는 2->3중 큰 경우
+	cache[0] = stair[0];
+	cache[1] = stair[0] + stair[1];
+	cache[2] = max(stair[0] + stair[2], stair[1] + stair[2]); // 1->3 또는 2->3중 큰 경우
 
 	for (int i = 3; i < n; i++)
-		dp[i] = max(dp[i - 2] + stair[i], dp[i - 3] + stair[i - 1] + stair[i]);
-	return dp[n - 1];
+		cache[i] = max(cache[i - 2] + stair[i], cache[i - 3] + stair[i - 1] + stair[i]);
+	return cache[n - 1];
 }
 
 int main() {

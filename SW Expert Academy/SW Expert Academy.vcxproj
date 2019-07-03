@@ -40,7 +40,10 @@
     <ClCompile Include="3074_입국심사.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="6719_성수의 프로그래밍 강좌 시청.cpp" />
+    <ClCompile Include="6719_성수의 프로그래밍 강좌 시청.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="7699_수지의 수지 맞는 여행.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

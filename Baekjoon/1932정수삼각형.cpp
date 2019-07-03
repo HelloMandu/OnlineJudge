@@ -4,14 +4,14 @@
 using namespace std;
 
 int triangle[MAX][MAX];
-int dp[MAX][MAX];
+int cache[MAX][MAX];
 int MaxRoute(int n, int i = 0, int j = 0) {
 	if (i == n)
 		return 0;
-	else if (dp[i][j])
-		return dp[i][j];
+	else if (cache[i][j])
+		return cache[i][j];
 	else
-		return dp[i][j] = max(MaxRoute(n, i + 1, j), MaxRoute(n, i + 1, j + 1)) + triangle[i][j];
+		return cache[i][j] = max(MaxRoute(n, i + 1, j), MaxRoute(n, i + 1, j + 1)) + triangle[i][j];
 }
 
 int main() {

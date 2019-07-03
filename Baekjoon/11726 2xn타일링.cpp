@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int dp[1001];
+int cache[1001];
 /*int Tiling(int n) { // recursion
 	if (n < 3)
 		return dp[n] = n;
@@ -12,10 +12,10 @@ int dp[1001];
 }*/
 
 int Tiling(int n) { // bottom-up
-	dp[1] = 1; dp[2] = 2;
+	cache[1] = 1; cache[2] = 2;
 	for (int i = 3; i <= n; i++)
-		dp[i] = (dp[i - 1] + dp[i - 2]) % 10007;
-	return dp[n];
+		cache[i] = (cache[i - 1] + cache[i - 2]) % 10007;
+	return cache[n];
 }
 
 int main() {
