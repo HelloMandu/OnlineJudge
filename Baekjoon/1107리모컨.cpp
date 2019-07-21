@@ -26,7 +26,7 @@ bool canClick(int num) {
 
 int minButton() {
 	int result = abs(n - 100);
-	for (int i = 0; i <= 1000000; i++) {
+	for (int i = 0; i < 1000000; i++) {
 		if (canClick(i)) {
 			int length = getLength(i);
 			result = min(result, abs(n - i) + length);
