@@ -42,5 +42,8 @@
     <ClCompile Include="7699_수지의 수지 맞는 여행.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="7829보물왕태혁.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
