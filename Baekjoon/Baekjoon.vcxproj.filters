@@ -513,5 +513,20 @@
     <ClCompile Include="2178미로탐색.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="7569토마토.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1697숨바꼭질.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2206벽부수고이동하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10816숫자카드2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1654랜선자르기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

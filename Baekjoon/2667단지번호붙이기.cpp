@@ -2,7 +2,6 @@
 #include<algorithm>
 #include<vector>
 #include<string>
-#pragma warning(disable:4996)
 using namespace std;
 
 int n;
@@ -29,6 +28,22 @@ int dfs(int y, int x) {
 }
 
 int main() {
-
+	vector<int> result;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> map[i];
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (!isVisit[i][j] && map[i][j] == '1') {
+				result.push_back(dfs(i, j));
+			}
+		}
+	}
+	sort(result.begin(), result.end());
+	cout << result.size() << '\n';
+	for (int i = 0; i < result.size(); i++) {
+		cout << result[i] << '\n';
+	}
 	return 0;
 }
