@@ -588,5 +588,20 @@
     <ClCompile Include="10942팰린드롬.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="9663N-Queen.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15649N과M.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15650N과M(2).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15651N과M(3).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15652N과M(4).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
