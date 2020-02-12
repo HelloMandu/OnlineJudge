@@ -63,7 +63,10 @@ void dfs(int index, int count = 0) {
 }
 
 int main() {
-	cin >> a >> b;
+
+	int asdasd = false + 1;
+	cout << asdasd;
+	/*cin >> a >> b;
 	cin >> str >> str1 >> str2;
 	dfs(0, 0);
 	if (aflag) {
@@ -71,6 +74,6 @@ int main() {
 	}
 	else {
 		cout << -1;
-	}
+	}*/
 	return 0;
 }
