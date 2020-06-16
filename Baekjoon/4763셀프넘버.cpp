@@ -1,34 +1,32 @@
-#include<stdio.h>
-#pragma warning(disable :4996)
-int n[10001];
-int dn(int i) {
-	int real = i;
-	if (i >= 10000) {
-		real += i / 10000;
-		i %= 10000;
-	}
-	if (i >= 1000) {
-		real += i / 1000;
-		i %= 1000;
-	}
-	if (i >= 100) {
-		real += i / 100;
-		i %= 100;
-	}
-	if (i >= 10) {
-		real += i / 10;
-		real += i % 10;
-	}
-	if (i < 10)
-			return real + i;
+#include<iostream>
+using namespace std;
 
-	return real;
+bool arr[10001];
+
+int isSelf(int n) {
+	int sum = n;
+	while (n) {
+		sum += n % 10;
+		n /= 10;
+	}
+	return sum;
 }
+
+void selfNumber() {
+	for (int i = 1; i < 10001; i++) {
+		int n = isSelf(i);
+		if (n <= 10000) {
+			arr[n] = true;
+		}
+	}
+}
+
 int main() {
+	selfNumber();
 	for (int i = 1; i <= 10000; i++) {
-		n[dn(i)] = 1;
-		if (!n[i])
-			printf("%d\n", i);
+		if (!arr[i]) {
+			cout << i << '\n';
+		}
 	}
 	return 0;
 }
