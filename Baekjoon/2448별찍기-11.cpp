@@ -1,5 +1,5 @@
 #include<iostream>
-#define fastio() ios_base::sync_base_studio(false), cin.tie(null), cout.tie(null);
+#define fastio() ios_base::sync_base_stdio(false), cin.tie(null), cout.tie(null);
 using namespace std;
 
 char arr[3072][6144];
