@@ -630,5 +630,17 @@
     <ClCompile Include="2239스도쿠.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="13460구슬탈출.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="121002048(easy).cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1004어린왕자.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1005ACMCraft.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
