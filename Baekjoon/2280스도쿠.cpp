@@ -34,9 +34,8 @@ bool makeResult(int cnt) {
 
 int main() {
 	for (int i = 0; i < 9; i++) {
-		string a; cin >> a;
 		for (int j = 0; j < 9; j++) {
-			sudoku[i][j] = a[j] - '0';
+			cin >> sudoku[i][j];
 			int n = sudoku[i][j];
 			row[i][n] = col[j][n] = matrix[(i / 3) * 3 + j / 3][n] = true;
 		}
@@ -44,7 +43,7 @@ int main() {
 	if (makeResult(0)) {
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
-				cout << sudoku[i][j];
+				cout << sudoku[i][j] << ' ';
 			}
 			cout << '\n';
 		}

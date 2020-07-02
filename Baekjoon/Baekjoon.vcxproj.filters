@@ -627,9 +627,6 @@
     <ClCompile Include="11277 2-SAT.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="2239스도쿠.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="13460구슬탈출.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -643,6 +640,30 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="1010다리놓기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1015수열정렬.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2503숫자야구.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1016제곱ㄴㄴ수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2280스도쿠.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1019책 페이지.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2352반도체설계.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2357최솟값과최댓값.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="4195친구네트워트.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,4 +1,5 @@
 #include<iostream>
+#include<algorithm>
 #include<vector>
 #include<queue>
 #include<cstring>
@@ -26,9 +27,7 @@ int getResult(int n) {
 			if (--degree[next] == 0) {
 				Queue.push(next);
 			}
-			if (finish[next] < finish[node] + time[next]) {
-				finish[next] = finish[node] + time[next];
-			}
+			finish[next] = max(finish[next], finish[node] + time[next]);
 		}
 	}
 	return finish[End];
