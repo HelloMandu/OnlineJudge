@@ -663,8 +663,25 @@
     <ClCompile Include="2357최솟값과최댓값.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="4195친구네트워트.cpp">
+    <ClCompile Include="3878점분리.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="4195친구네트워크.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1024수열의합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1644소수의연속합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="output.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>
