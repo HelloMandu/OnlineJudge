@@ -714,6 +714,12 @@
     <ClCompile Include="2573빙산.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1916최소비용구하기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2563색종이.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
