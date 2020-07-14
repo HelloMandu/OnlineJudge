@@ -21,6 +21,15 @@
     <ClCompile Include="5032탄산음료.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="3986좋은단어.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10451순열사이클.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="17086아기상어.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
