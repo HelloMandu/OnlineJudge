@@ -30,6 +30,18 @@
     <ClCompile Include="17086아기상어.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="6086최대유량.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="15683감시.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10757큰수.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="1188음식평론가.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
