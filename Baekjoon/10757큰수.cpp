@@ -30,8 +30,7 @@ void sum() {
 	for (int i = 0; i < length; i++) {
 		int sum = (carry + n1.num[i] + n2.num[i]);
 		result.num[i] = sum % 10;
-		if (sum >= 10) { carry = 1; }
-		else { carry = 0; }
+		carry = sum / 10;
 	}
 	for (int i = result.size; i >= 0; i--) {
 		if (result.num[i] != 0) {
