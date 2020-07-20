@@ -48,6 +48,9 @@
     <ClCompile Include="11404플로이드.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="11780플로이드2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
