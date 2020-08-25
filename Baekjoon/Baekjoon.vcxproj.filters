@@ -66,9 +66,6 @@
     <ClCompile Include="10972다음순열.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="cd산책.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="9625BABBA.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -87,7 +84,10 @@
     <ClCompile Include="10881프로도의선물포장.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="scpc.cpp">
+    <ClCompile Include="9465스티커.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2225합분해.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
