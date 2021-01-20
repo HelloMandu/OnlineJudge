@@ -90,6 +90,15 @@
     <ClCompile Include="2225합분해.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="1699제곱수의합.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="9184신나는함수실행.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="14631로만들기.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
