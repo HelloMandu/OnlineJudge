@@ -13,6 +13,6 @@ int isLeapYear(int year) {
 int main() {
 	int year;
 	cin >> year;
-	cout << isLeapYear(year);
+	cout << isLeapYear(year) << '\n';
 	return 0;
 }
