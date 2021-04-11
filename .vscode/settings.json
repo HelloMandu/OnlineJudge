@@ -18,7 +18,13 @@
         "xmemory": "cpp",
         "xstring": "cpp",
         "xtree": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "utility": "cpp",
+        "ios": "cpp",
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "__cxx_version": "cpp",
+        "__config": "cpp"
     },
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
