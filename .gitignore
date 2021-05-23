@@ -1,2 +1,3 @@
-# .exec files
 *.exec
+.vscode
+.idea
