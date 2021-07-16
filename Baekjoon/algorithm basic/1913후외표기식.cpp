@@ -25,7 +25,7 @@ int main(){
     int n;
     string str;
     stack<double> Stack;
-    cin >> n >> str;˝
+    cin >> n >> str;
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
