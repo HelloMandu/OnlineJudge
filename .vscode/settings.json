@@ -23,6 +23,7 @@
         "ios": "cpp",
         "stack": "cpp",
         "iosfwd": "cpp",
-        "__tuple": "cpp"
+        "__tuple": "cpp",
+        "regex": "cpp"
     }
 }
