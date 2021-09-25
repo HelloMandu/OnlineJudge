@@ -27,7 +27,7 @@ int main() {
 				cin >> triangle[i][j];
 			}
 		}
-		cout << getMaxPath(n, 0, 0) << '\n';
+		cout << getMaxPath(0, 0) << '\n';
 	}
 	return 0;
 }
