@@ -24,6 +24,7 @@
         "stack": "cpp",
         "iosfwd": "cpp",
         "__tuple": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "iostream": "cpp"
     }
 }
