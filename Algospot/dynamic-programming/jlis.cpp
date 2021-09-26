@@ -18,7 +18,7 @@ long long getJLis(int indexN, int indexM){
     long long limitN = indexN == -1 ? MINIMUM : arrN[indexN];
     long long limitM = indexM == -1 ? MINIMUM : arrM[indexM];
     long long limit = max(limitN, limitM);
-    ret = 2;
+    ret = 0;
     for(int i = indexN + 1; i < n; i++){
         if(limit < arrN[i]){
             ret = max(getJLis(i, indexM) + 1, ret);
@@ -45,7 +45,7 @@ int main() {
         for(int i = 0; i < m; i++){
             cin >> arrM[i];
         }
-        cout << getJLis(-1, -1) - 2 << '\n';
+        cout << getJLis(-1, -1) << '\n';
 	}
 	return 0;
 }
