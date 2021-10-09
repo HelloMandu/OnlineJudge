@@ -26,6 +26,15 @@
         "__tuple": "cpp",
         "regex": "cpp",
         "iostream": "cpp",
-        "__locale": "cpp"
+        "__locale": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "iterator": "cpp",
+        "random": "cpp",
+        "set": "cpp",
+        "string_view": "cpp",
+        "unordered_set": "cpp",
+        "valarray": "cpp"
     }
 }
