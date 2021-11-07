@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 
-void StackSequence(int arr[], int testCase) {
+void stackSequence(int arr[], int testCase) {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL), cout.tie(NULL);
 	vector<char> result;
@@ -32,8 +32,9 @@ int main() {
 	int testCase;
 	int arr[100001];
 	cin >> testCase;
-	for (int i = 0; i < testCase; i++)
+	for (int i = 0; i < testCase; i++){
 		cin >> arr[i];
-	StackSequence(arr, testCase);
+	}
+	stackSequence(arr, testCase);
 	return 0;
 }
