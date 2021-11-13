@@ -35,6 +35,7 @@
         "set": "cpp",
         "string_view": "cpp",
         "unordered_set": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "__string": "cpp"
     }
 }
