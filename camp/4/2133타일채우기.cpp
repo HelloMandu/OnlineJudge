@@ -8,7 +8,7 @@ int main(){
 	cin >> n;
 	for(int i = 4; i <= n; i++){
 		cache[i] = cache[i - 2] * 3;
-		for(int j = 4; i - j >= 0;j += 2){
+		for(int j = 4; j <= i; j += 2){
 			cache[i] += cache[i - j] * 2;
 		}
 	}
