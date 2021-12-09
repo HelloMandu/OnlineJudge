@@ -36,6 +36,7 @@
         "string_view": "cpp",
         "unordered_set": "cpp",
         "valarray": "cpp",
-        "__string": "cpp"
+        "__string": "cpp",
+        "__bit_reference": "cpp"
     }
 }
