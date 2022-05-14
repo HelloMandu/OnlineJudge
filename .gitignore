@@ -1,7 +1,10 @@
 *.exec
-.vscode
-.idea
 *
 !/**/
 !*.*
 /**/*.txt
+
+
+# folder
+.idea
+.vscode
