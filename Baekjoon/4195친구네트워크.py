@@ -1,36 +1,31 @@
 from collections import defaultdict
 
-t = int(input())
-
-def find(x):
-    if x not in parent:
-        parent[x] = x
-        return x
-
-    if parent[x] == x:
-        return x
-    parent[x] = find(parent[x])
-    return parent[x]
-
+def getParent(a):
+    if not parent[a]:
+        parent[a] = a
+        return a
+    if a == parent[a]:
+        return a
+    else:
+        parent[a] = getParent(parent[a])
+        return parent[a]
 
 def union(a, b):
-    pA = find(a)
-    pB = find(b)
-    if pA == pB:
-        return setCount[pA]
+    a = getParent(a)
+    b = getParent(b)
+    if a == b:
+        return count[a]
+    parent[b] = a
+    count[a] += count[b]
+    return count[a]
 
-    setCount[pA] += setCount[pB]
-    parent[pB] = pA
-    return setCount[pA]
+t = int(input())
 
-
-result = []
 while t:
     t -= 1
-
-    parent = {}
-    setCount = defaultdict(lambda: 1)
     n = int(input())
-    for i in range(n):
-        a, b = input().split(' ')
+    parent = defaultdict(bool)
+    count = defaultdict(lambda: 1, {})
+    for _ in range(n):
+        a, b = input().split()
         print(union(a, b))

@@ -1,31 +1,28 @@
 import sys
-from collections import deque
-
 input = sys.stdin.readline
 
-def bfs(want):
-    queue = deque([start])
+def bfs(weight):
+    queue = [start]
     visited = [False] * (n + 1)
     visited[start] = True
     while queue:
-        node = queue.popleft()
-        for nextNode, nextWeight in graph[node]:
-            if not visited[nextNode] and nextWeight >= want:
-                visited[nextNode] = True
-                queue.append(nextNode)
+        front = queue.pop(0)
+        for next, nextWeight in graph[front]:
+            if not visited[next] and nextWeight >= weight:
+                visited[next] = True
+                queue.append(next)
     return visited[end]
 
 n, m = map(int, input().split())
-left = 1000000000
-right = 0
-
 graph = [[] for _ in range(n + 1)]
+left = 10 ** 9
+right = 0
 for _ in range(m):
-    a, b, c = map(int, input().split())
-    graph[a].append([b, c])
-    graph[b].append([a, c])
-    left = min(left, c)
-    right = max(right, c)
+    v, e, w = map(int, input().split())
+    graph[v].append((e, w))
+    graph[e].append((v, w))
+    left = min(left, w)
+    right = max(right, w)
 
 start, end = map(int, input().split())
 
@@ -33,8 +30,8 @@ result = left
 while left <= right:
     mid = (left + right) // 2
     if bfs(mid):
-        result = mid
         left = mid + 1
+        result = mid
     else:
         right = mid - 1
 print(result)
