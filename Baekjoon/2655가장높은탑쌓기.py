@@ -1,29 +1,32 @@
 n = int(input())
-arr = []
+
 dp = [0] * n
-parent = [0] * n
-
+cnt = [0] * n
+arr = []
 for i in range(n):
-    width, height, weight = map(int, input().split())
-    arr.append((i, width, height, weight))
-
-arr.sort(key=lambda x: x[1])
+    w, h, k = map(int, input().split())
+    arr.append((i + 1, w, h, k))
+arr.sort(key=lambda x: x[1], reverse=True)
 
 for i in range(n):
     dp[i] = arr[i][2]
+    cnt[i] = 1
     for j in range(i):
-        pIndex, pW, pH, pWe = arr[j]
-        index, w, h, we = arr[i]
-        if we > pWe:
-            dp[i] = max(dp[i], dp[j] + h)
+        if arr[i][3] > arr[j][3]:
+            continue
+        if dp[i] < dp[j] + arr[i][2]:
+            dp[i] = dp[j] + arr[i][2]
+            cnt[i] = cnt[j] + 1
 
-maxResult = max(dp)
-index = n - 1
-result = []
-while index >= 0:
-    if dp[index] == maxResult:
-        result.append(arr[index])
-        maxResult -= arr[index][2]
-    index -= 1
-print(len(result))
-[print(i[0] + 1) for i in reversed(result)]
+maxIndex = 0
+for i in range(n):
+    if dp[i] > dp[maxIndex]:
+        maxIndex = i
+
+print(cnt[maxIndex])
+curHeight = dp[maxIndex]
+for i in range(maxIndex, -1, -1):
+    if curHeight == dp[i]:
+        print(arr[i][0])
+        curHeight -= arr[i][2]
+

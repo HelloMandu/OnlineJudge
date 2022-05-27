@@ -7,8 +7,8 @@ for i in range(1, n + 1):
     for j in range(m + 1):
         if not cache[i - 1][j]:
             continue
-        plus = j + arr[i - 1]
         minus = j - arr[i - 1]
+        plus = j + arr[i - 1]
         if minus >= 0:
             cache[i][minus] = True
         if plus <= m:

@@ -1,52 +1,49 @@
-from collections import deque
 import heapq
 import sys
 input = sys.stdin.readline
-INF = sys.maxsize
+
+INF = 10 ** 9
 
 def dijkstra():
-    queue = []
-    heapq.heappush(queue, (0, start))
-    distance[start] = 0
-    while queue:
-        dis, cur = heapq.heappop(queue)
-        if distance[cur] < dis:
+    heap = [(start, 0)]
+    distances[start] = 0
+    while heap:
+        cur, dis = heapq.heappop(heap)
+        if dis > distances[cur]:
             continue
-        for next, nextDis in graph[cur]:
-            if route[cur][next]:
-                continue
-            cost = dis + nextDis
-            if distance[next] > cost:
-                distance[next] = cost
-                heapq.heappush(queue, (cost, next))
+        for next, cost in graph[cur]:
+            if distances[next] >= distances[cur] + cost and not paths[cur][next]:
+                distances[next] = distances[cur] + cost
+                heapq.heappush(heap, (next, distances[next]))
+    return distances[end]
 
-def bfs():
-    queue = deque()
-    queue.append(end)
+def findPath():
+    queue = [end]
     while queue:
-        cur = queue.popleft()
+        cur = queue.pop(0)
         if cur == start:
-            continue
-        for prev, prevDis in rGraph[cur]:
-            if distance[cur] == distance[prev] + prevDis:
-                route[prev][cur] = True
-                queue.append(prev)
+            return
+        for next, cost in rGraph[cur]:
+            if distances[cur] - cost == distances[next]:
+                paths[next][cur] = True
+                queue.append(next)
+
 
 while True:
     n, m = map(int, input().split())
-    if n == 0:
+    if n == 0 and m == 0:
         break
     start, end = map(int, input().split())
     graph = [[] for _ in range(n)]
     rGraph = [[] for _ in range(n)]
+    paths = [[False] * n for _ in range(n)]
+    distances = [INF] * n
     for _ in range(m):
-        u, v, p = map(int, input().split())
-        graph[u].append((v, p))
-        rGraph[v].append((u, p))
-    route = [[False] * n for _ in range(n)]
-    distance = [INF] * n
+        v, e, w = map(int, input().split())
+        graph[v].append((e, w))
+        rGraph[e].append((v, w))
     dijkstra()
-    bfs()
-    distance = [INF] * n
-    dijkstra()
-    print(distance[end] if distance[end] != INF else -1)
+    findPath()
+    distances = [INF] * n
+    result = dijkstra()
+    print(result if result != INF else -1)
