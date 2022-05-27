@@ -1,32 +1,21 @@
-import heapq
-
 n, m = map(int, input().split())
-books = sorted(list(map(int, input().split())))
+books = sorted(list(map(int, input().split())), reverse=True)
 
-plusQueue = []
-minusQueue = []
-
-for i in books:
-    if i > 0:
-        heapq.heappush(plusQueue, -i)
+left = []
+right = []
+for book in books:
+    if book < 0:
+        left.append(-book)
     else:
-        heapq.heappush(minusQueue, i)
+        right.append(book)
+left.sort(reverse=True)
 
-
+result = 0
 arr = []
-while plusQueue:
-    arr.append(-heapq.heappop(plusQueue))
-    for _ in range(m - 1):
-        if not plusQueue:
-            break
-        heapq.heappop(plusQueue)
-
-while minusQueue:
-    arr.append(-heapq.heappop(minusQueue))
-    for _ in range(m - 1):
-        if not minusQueue:
-            break
-        heapq.heappop(minusQueue)
-
+for i in range(0, len(left), m):
+    arr.append(left[i])
+for i in range(0, len(right), m):
+    arr.append(right[i])
 arr.sort()
-print((sum(arr) * 2) - arr[-1])
+print(sum(arr) * 2 - arr[len(arr) - 1])
+

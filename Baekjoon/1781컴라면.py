@@ -9,10 +9,12 @@ for _ in range(n):
 arr.sort()
 
 heap = []
-for dead, cup in arr:
-    a = dead
-    heapq.heappush(heap, cup)
-    if dead < len(heap):
+for a, b in arr:
+    heapq.heappush(heap, b)
+    if len(heap) > a:
         heapq.heappop(heap)
 
-print(sum(heap))
+result = 0
+while heap:
+    result += heapq.heappop(heap)
+print(result)

@@ -1,15 +1,14 @@
 n = int(input())
 k = int(input())
-coord = sorted(list(map(int, input().split())))
-
-if k >= n:
-    print(0)
-    exit()
+arr = sorted(list(map(int, input().split())))
 diff = []
+
 for i in range(1, n):
-    diff.append(coord[i] - coord[i - 1])
-diff.sort()
+    diff.append(arr[i] - arr[i - 1])
+
+diff.sort(reverse=True)
 for _ in range(k - 1):
-    diff.pop()
+    if diff:
+        diff.pop(0)
 
 print(sum(diff))
